@@ -6,10 +6,11 @@ License
 Blucat is released under a GPL license for non-comercial use. To use Blucat in your product please contact joecohen /at/ ieee.org
 
 Operating System Compatibility
-Ubuntu Linux 12.04 32-bit	Works
-Ubuntu Linux 12.04 64-bit	Works
-Apple Mac 10.6 Snow Leopard	Works
-Apple Mac 10.8 Lion Works
+Ubuntu Linux 12.04 32-bit	    Works
+Ubuntu Linux 12.04 64-bit	    Works
+Apple Mac 10.6 Snow Leopard	  Works
+Apple Mac 10.8 Lion           Works
+Apple Mac 10.9 Lion           Issues
 
 
 ##Ubuntu##
