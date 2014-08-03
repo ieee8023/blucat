@@ -1,0 +1,16 @@
+#!/bin/bash
+
+export DYLD_LIBRARY_PATH=$(pwd)/lib
+
+
+if [[ $OSTYPE == *darwin* ]]; then
+   LIBS=lib/bluecove-2.1.1-SNAPSHOT.jar
+elif [[ $OSTYPE == *linux* ]]; then
+   LIBS=lib/bluecove-2.1.0.jar:lib/bluecove-gpl-2.1.0.jar
+fi
+
+
+
+
+java -cp bin:$LIBS Main $@ 2>&1 | grep -v -E '(Pool|BlueCove)'
+

@@ -1,0 +1,39 @@
+#!/bin/bash
+
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+COMMONLIBS=$DIR/build/blucat.jar:$DIR/lib/commons-io-2.4.jar
+
+if [[ $OSTYPE == *darwin* ]]; then
+	LIBS=$DIR/lib/bluecove-2.1.1-SNAPSHOT-r63.jar
+   
+	# This is a patch because the libs changed 
+	DARWINVER=`sysctl -n kern.osrelease`
+	if [[ $DARWINVER == 11* ]]; then
+	    export DYLD_LIBRARY_PATH=$DIR/lib
+	elif [[ $DARWINVER == 12* ]]; then
+	    export DYLD_LIBRARY_PATH=$DIR/lib
+	elif [[ $DARWINVER == 13* ]]; then
+	    echo "###########################################################"
+	    echo "####### There are many problems on OSX 10.9 Mavericks : ("
+	    echo "####### I've patched it but service scans don't work."
+	    echo "###########################################################"
+	    LIBS=$DIR/lib/bluecove-2.1.1-SNAPSHOT-jarias.jar
+	fi
+	
+elif [[ $OSTYPE == *linux* ]]; then
+
+MACH="$(uname -m)"
+
+if [[ $MACH == *arm* ]]; then
+    LIBS=$DIR/lib/bluecove-2.1.1-SNAPSHOT-r63.jar:$DIR/lib.arm/bluecove-gpl-2.1.1-SNAPSHOT-r63.jar
+else
+    LIBS=$DIR/lib/bluecove-2.1.1-SNAPSHOT-r63.jar:$DIR/lib/bluecove-gpl-2.1.1-SNAPSHOT-r63.jar
+fi
+fi
+
+
+
+#-Dbluecove.debug=1
+java -cp $COMMONLIBS:$LIBS blucat.Main $@ 2> >(grep --line-buffered -v NSAutoreleaseNoPool >&2)
+
