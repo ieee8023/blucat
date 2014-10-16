@@ -6,8 +6,8 @@ COMMONLIBS=$DIR/build/blucat.jar:$DIR/lib/commons-io-2.4.jar
 
 if [[ $OSTYPE == *darwin* ]]; then
 	LIBS=$DIR/lib/bluecove-2.1.1-SNAPSHOT-r63.jar
-   
-	# This is a patch because the libs changed 
+
+	# This is a patch because the libs changed
 	DARWINVER=`sysctl -n kern.osrelease`
 	if [[ $DARWINVER == 11* ]]; then
 	    export DYLD_LIBRARY_PATH=$DIR/lib
@@ -20,13 +20,9 @@ if [[ $OSTYPE == *darwin* ]]; then
 	    echo "###########################################################"
 	    LIBS=$DIR/lib/github-machaval/bluecove-2.1.1-SNAPSHOT.jar
 	elif [[ $DARWINVER == 14* ]]; then
-	    echo "###########################################################"
-	    echo "####### There may be issues with blucat on OSX 10.10  : ("
-	    echo "####### I expect that service scans won't work yet"
-	    echo "###########################################################"
-	    LIBS=$DIR/lib/github-machaval/bluecove-2.1.1-SNAPSHOT.jar
+	    LIBS=$DIR/lib/github-machaval/bluecove-2.1.1-SNAPSHOT-jarias.jar
 	fi
-	
+
 elif [[ $OSTYPE == *linux* ]]; then
 
 MACH="$(uname -m)"
