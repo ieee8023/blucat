@@ -20,7 +20,10 @@ if [[ $OSTYPE == *darwin* ]]; then
 	    echo "###########################################################"
 	    LIBS=$DIR/lib/github-machaval/bluecove-2.1.1-SNAPSHOT.jar
 	elif [[ $DARWINVER == 14* ]]; then
-	    LIBS=$DIR/lib/github-machaval/bluecove-2.1.1-SNAPSHOT-jarias.jar
+	    echo "#################################################################"
+	    echo "####### There may be problems with OSX 10.10. Please let me know"
+	    echo "#################################################################"
+	    LIBS=$DIR/lib/bluecove-2.1.1-SNAPSHOT-jarias.jar
 	fi
 
 elif [[ $OSTYPE == *linux* ]]; then
