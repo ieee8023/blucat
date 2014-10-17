@@ -1,9 +1,13 @@
-blucat
+
+![blucat logo](http://blucat.sourceforge.net/blucat.png "bluecat logo")
+
+
+##blucat##
 The netcat for bluetooth!
-by Joseph Paul Cohen 2012
+by Joseph Paul Cohen 2012 http://blucat.sourceforge.net/blucat/
 
 License
-Blucat is released under a GPL license for non-comercial use. To use Blucat in your product please contact joecohen /at/ ieee.org
+Blucat is released under a GPL license for non-comercial use. To use Blucat in your product please contact joseph /at/ josephpcohen.com
 
 | Operating System | Compatibility  |
 |---|---|
@@ -12,7 +16,7 @@ Blucat is released under a GPL license for non-comercial use. To use Blucat in y
 | Apple Mac 10.6 Snow Leopard  |  Works |
 | Apple Mac 10.8 Lion  | Works  |
 | Apple Mac 10.9 Mountain Lion  | Issues with service scan  |
-| Apple Mac 10.10 Yosemite  | Works  |
+| Apple Mac 10.10 Yosemite  | Service scan works (no RSSI yet)  |
 
 
 ##Ubuntu##
