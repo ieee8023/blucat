@@ -232,7 +232,7 @@ public class Main {
 				"-_-_-_-_-_-_-_,------,\n" +
 				"_-_-_-_-_-_-_-|   /\\_/\\\n" +
 				"-_-_-_-_-_-_-~|__( ^ .^)\n" +
-				"              \"\"  \"\"\n" +
+				"               \"\"  \"\"\n" +
 				
 				
 				
@@ -247,6 +247,7 @@ public class Main {
 				"  blucat -l <port> -e <command>: Listen for RFCOMM connection, execute <command> when connection\n" +
 				"  blucat <server args> -k : Keep the connection alive\n" +
 				"  blucat -url <url> : Connect to RFCOMM URL \n" + 
+				"  blucat [commands] -rssi : print RSSI of device(s) \n" + 
 				"  blucat doctor : Run this if it's not working \n");
 		System.exit(0);
 	}
