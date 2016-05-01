@@ -17,6 +17,12 @@ if [[ $OSTYPE == *darwin* ]]; then
 	    LIBS=$DIR/lib/github-machaval/bluecove-2.1.1-SNAPSHOT.jar
 	elif [[ $DARWINVER == 14* ]]; then
 	    LIBS=$DIR/lib/bluecove-2.1.1-SNAPSHOT-jarias.jar
+	elif [[ $DARWINVER == 15* ]]; then
+	    # Add for el capitan
+	    LIBS=$DIR/lib/bluecove-2.1.1-SNAPSHOT-jarias.jar
+	elif [[ $DARWINVER == 16* ]]; then
+	    # Add for whatever the next OSX version is
+	    LIBS=$DIR/lib/bluecove-2.1.1-SNAPSHOT-jarias.jar
 	fi
 
 elif [[ $OSTYPE == *linux* ]]; then
