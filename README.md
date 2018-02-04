@@ -17,7 +17,7 @@ Blucat is released under a GPL license for non-comercial use. To use Blucat in y
 | Apple Mac 10.8 Lion  | Works  |
 | Apple Mac 10.9 Mountain Lion  | Issues with service scan  |
 | Apple Mac 10.10 Yosemite  | Service scan works (no RSSI yet)  |
-
+| Apple Mac 10.11.6 El Captian | Service scan works (no RSSI yet)  | 
 
 ##Ubuntu##
 
