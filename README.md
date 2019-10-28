@@ -2,7 +2,8 @@
 ![blucat logo](http://blucat.sourceforge.net/blucat.png "bluecat logo")
 
 
-##blucat##
+## blucat
+
 The netcat for bluetooth!
 by Joseph Paul Cohen 2012 http://blucat.sourceforge.net/blucat/
 
@@ -19,9 +20,12 @@ Blucat is released under a GPL license for non-comercial use. To use Blucat in y
 | Apple Mac 10.10 Yosemite  | Service scan works (no RSSI yet)  |
 | Apple Mac 10.11.6 El Captian | Service scan works (no RSSI yet)  | 
 
-##Ubuntu##
+## Ubuntu
 
 For Ubuntu install the packages:
 
+```bash
 sudo apt-get install bluez-tools libbluetooth-dev
+```
 
+<!-- EOF -->
